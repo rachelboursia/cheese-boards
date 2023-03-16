@@ -2,7 +2,7 @@ const path = require("path");
 const { Sequelize, Model } = require("sequelize");
 
 const sequelize = new Sequelize({
-    dialect: "splite",
+    dialect: "sqlite",
     storage: path.join(__dirname, "db.sqlite"),
 });
 

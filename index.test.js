@@ -9,6 +9,7 @@ describe("Cheese Board Models", () => {
 
 	test("Create New Board", async () => {
 		
+		// watch out for indentation, make sure that every new indented line is only one indent below the parent
         const testBoard = await Board.create({
 			type: "Blue Cheese",
 			description: "A semi-soft cheese with a sharp, salty flavor.",
@@ -95,6 +96,7 @@ describe("Cheese Board Models", () => {
 
 		const cheeses = await board.getCheeses();
 		expect(cheeses).toHaveLength(2);
+		// adjust these titles here to pass the tests, check line 86 and 90 for updated titles
 		expect(cheeses[0].title).toBe("Cheese1");
 		expect(cheeses[1].title).toBe("Cheese2");
 
